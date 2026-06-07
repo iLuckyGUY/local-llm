@@ -12,7 +12,10 @@ Before suggesting or downloading any model, enforce strict parameter size limits
 - **RAM > 32 GB:** Allow heavier models (**14B to 32B+**).
 
 ## 3. Platform-Specific Optimization Rules
-- **Apple Silicon (ARM64, M-Series):** High-priority target. Utilize GGUF format with standard quants (`Q4_K_M` or `Q8_0`) to take advantage of Unified Memory speed.
+- **Apple Silicon (ARM64, M-Series):** High-priority target. 
+    - **Format Priority:** Prefer **MLX** native formats whenever available for maximum throughput and NPU utilization. 
+    - **Fallback:** Utilize **GGUF** format with standard quants (`Q4_K_M` or `Q8_0`) as a secondary option. 
+    - **Benefit:** MLX models provide the highest tokens-per-second (TPS) and lowest latency on M-series chips compared to generic formats.
 - **Intel Architecture (x86_64):** Rely on aggressive quantization (`Q4_K_S` or `Q3_K_M`) because execution runs primarily on CPU/RAM with lower bandwidth. Keep models strictly under 8B to maintain acceptable generation speed.
 
 ## 4. Model Use-Case Priority (Ranking Logic)

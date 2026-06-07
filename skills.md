@@ -31,10 +31,12 @@ When the user selects Ollama as the target backend:
 
 When the user selects LM Studio as the target backend:
 
-1. Search Hugging Face specifically for compatible `.gguf` files.
-2. Select the optimal quant filename (defaulting to `*Q4_K_M.gguf`).
-3. Download the file into the standard LM Studio local cache directory:
-* **Path:** `$HOME/.cache/lm-studio/models/<publisher>/<model_name>/`
+1. **Format Selection (Apple Silicon):** 
+   - Search Hugging Face specifically for **MLX-compatible** versions of the target model first.
+   - If no MLX version is found, fallback to searching for compatible **.gguf** files.
+2. **Quantization:** Select the optimal quant (defaulting to `*Q4_K_M.gguf` for GGUF or standard 4-bit for MLX).
+3. **Download:** Download the file into the standard LM Studio local cache directory:
+   - **Path:** `~/.lmstudio/models/<publisher>/<model_name>/`
 
 
 4. Print a user-facing notification: *"Download complete. Please open LM Studio and select <model_name> from the top menu."*
