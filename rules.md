@@ -21,9 +21,18 @@ When suggesting models, rank them based on primary user intent:
 - **Creative/Vision (Multimodal):** Prioritize models with "Vision" or "VL" tags (e.g., Llama-3.2-Vision, Qwen2-VL).
 - **Speed/Chat:** Prioritize smaller quants or distilled versions for instant response.
 
-## 5. Execution Workflow
+## 5. Directory & Model Management
+- **Native Directories:** Always check for native application directories before downloading:
+    - **Ollama:** `~/.ollama/models`
+    - **LM Studio:** `~/.cache/lm-studio/models`
+- **Pre-download Check:** If a native directory exists, use it as the default download path.
+- **Inventory Audit:** Before suggesting new models, list existing models in these directories.
+- **Hardware Compatibility Check:** Compare existing models against the RAM constraints in Rule #2. If a model is significantly oversized (e.g., a 30B model on 8GB RAM), explicitly suggest its deletion to the user to free up space and prevent accidental system instability.
+
+## 6. Execution Workflow
 1. Run `./check_hardware.sh` to profile host hardware.
-2. Cross-reference detected specs with the RAM constraints.
-3. Ask user for primary intent (Text vs. Image/Vision).
-4. Present top 3-5 recommended models with brief explanations.
-5. Execute download via [Ollama] or [LM Studio] based on choice.
+2. Scan native directories (`~/.ollama`, `~/.cache/lm-studio`) for existing models.
+3. Cross-reference detected specs and existing inventory with the RAM constraints.
+4. Ask user for primary intent (Text vs. Image/Vision).
+5. Present top 3-5 recommended models, noting if any are already installed or if any existing ones should be removed.
+6. Execute download/management via [Ollama] or [LM Studio] based on choice.
