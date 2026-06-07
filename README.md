@@ -36,5 +36,13 @@ Inspired by this video: [https://youtu.be/9_uJOuxbzq0](https://youtu.be/9_uJOuxb
 - This project **never** stores API keys or secrets.
 - Always load your `HF_TOKEN` via environment variables.
 
+## Optional: Enhance with Hugging Face Token
+
+To unlock faster download speeds and access restricted models (like Llama-3), you can provide a Hugging Face Access Token.
+
+1. **Get your token:** Create a "Read" token at [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens).
+2. **Usage:** Set the `HF_TOKEN` environment variable in your shell or provide it when prompted by the agent.
+3. **Why?** Authenticated requests are prioritized by Hugging Face's servers, which can significantly reduce download times for large model files.
+
 ---
 *Created with ❤️ for the Local LLM Community.*
