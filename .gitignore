@@ -3,3 +3,4 @@
 .env
 .ssh/
 node_modules/
+INTEGRATION_GUIDE.md
