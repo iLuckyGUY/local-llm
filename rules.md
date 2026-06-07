@@ -24,7 +24,7 @@ When suggesting models, rank them based on primary user intent:
 ## 5. Directory & Model Management
 - **Native Directories:** Always check for native application directories before downloading:
     - **Ollama:** `~/.ollama/models`
-    - **LM Studio:** `~/.cache/lm-studio/models`
+    - **LM Studio:** `~/.lmstudio/models` (Mac/Linux) or `C:\Users\<User>\.lmstudio\models` (Windows)
 - **Pre-download Check:** If a native directory exists, use it as the default download path.
 - **Inventory Audit:** Before suggesting new models, list existing models in these directories.
 - **Hardware Compatibility Check:** Compare existing models against the RAM constraints in Rule #2. If a model is significantly oversized (e.g., a 30B model on 8GB RAM), explicitly suggest its deletion to the user to free up space and prevent accidental system instability.

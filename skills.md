@@ -3,7 +3,7 @@
 ## Skill 1: Automated Guided Selection
 The agent must follow this logic when the user says "download model":
 1. **System Check:** Run `./check_hardware.sh`.
-2. **Inventory Check:** Scan `~/.ollama/models` and `~/.cache/lm-studio/models` for existing files.
+2. **Inventory Check:** Scan `~/.ollama/models` and `~/.lmstudio/models` for existing files.
 3. **Analysis:** Match RAM, CPU, and existing inventory against `rules.md`.
 4. **Intent Discovery:** Ask the user: "What is your main goal? (e.g., Coding, General Chat, or Vision/Images)".
 5. **Ranking & Cleanup:**
