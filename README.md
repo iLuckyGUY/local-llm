@@ -2,7 +2,7 @@
 
 This project provides an automated, hardware-aware workflow for deploying Local Large Language Models (LLMs) on macOS. It profiles your system and recommends the best models based on your RAM, CPU, and specific use cases (Coding, Chat, or Vision).
 
-Based on the tutorial by **[Ivan Kvasov](https://www.youtube.com/@IvanKvasov)**.
+Based on the tutorial by **[Web3nity](https://www.youtube.com/@Web3nity)**.
 Inspired by this video: [https://youtu.be/9_uJOuxbzq0](https://youtu.be/9_uJOuxbzq0)
 
 ## Features
